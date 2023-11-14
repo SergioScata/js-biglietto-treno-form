@@ -18,23 +18,42 @@
 <body class="bg-danger">
 
         <form id="mio-form" onsubmit="userdonedatacompletion(event)">
-        <input type="text" id="namesurname">
-        <input type="text" id="travellength">
-        <select id="age" class="form-select" aria-label="Default select example"> 
-            <option selected>Insert your age range</option>
-            <option value="underage">Less than 18</option>
-            <option value="midages">Between 18 and 64</option>
-            <option value="over65">Over 65</option>
-          </select>
-          <button class="btn btn-primary mt-5" type="submit">Submit</button>
-        </form>
-
-        </form>
-    </div>
-    <div class="row">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="mb-3">
+                            <label class="form-label text-white"><h2>Insert your name and surname!</h2></label>
+                            <input type="text" class="form-control" id="namesurname" placeholder="name surname">
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label text-white"><h2>Insert how many kms you want to travel!</h2></label>
+                            <input type="text" class="form-control" id="travellength" placeholder="Insert your travel length">
+                          </div>
+                          <h2 class="text-white mb-3">Select your age range!</h2>
+                          <select id="age" class="form-select" aria-label="Default select example"> 
+                            <option selected>Insert your age range</option>
+                            <option value="underage">Less than 18</option>
+                            <option value="midages">Between 18 and 64</option>
+                            <option value="over65">Over 65</option>
+                          </select>
+                          <button class="btn btn-primary mt-5" type="submit">Submit</button>
+                    </div>
         
+            </div>
+        </div>
+    </form>
+    <div id="biglietto" class="container-fluid d-none my-5">
+        <div class="row text-center">
+            <div col-12>
+                <div class="card">
+                    <div class="card-body">
+                    <p>Ciao <span id="nomecognome"></span></p>
+                      <p>Il prezzo del tuo biglietto è <span id="prezzobiglietto"></span></p>
+                    </div>
+                  </div> 
+            </div>
+        </div>
     </div>
-  </div>
 
  
   <script src="./js/main.js"></script>

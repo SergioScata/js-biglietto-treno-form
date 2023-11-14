@@ -11,25 +11,32 @@ function userdonedatacompletion(event) {
     let age = document.getElementById("age").value;
 
     travellength = parseFloat(travellength);
-    age = parseInt(age);
+    
 
     let ticketprice= (travellength * 0.21);
-    let finalprice = ticketprice.toFixed(2);
+    
 
 
-    if (age == over65) {
-        finalprice= (ticketprice * 0.6);
+    if (age =='over65') {
+        ticketprice= (ticketprice * 0.6);
      }
-     else if (age == underage) {
-         finalprice= (ticketprice * 0.8);
+     else if (age =='underage') {
+         ticketprice= (ticketprice * 0.8);
      }
      else {
-         finalprice= ticketprice;
+         ticketprice= ticketprice;
      }
 
+     let finalprice = ticketprice.toFixed(2);
 
+     console.log ("Il prezzo del tuo biglietto è:" + finalprice);
 
+     document.getElementById("prezzobiglietto").innerHTML = finalprice;
+     document.getElementById("nomecognome").innerHTML = namesurname;
+     document.getElementById("mio-form").classList.add("d-none");
+     document.getElementById("biglietto").classList.remove("d-none");
     }
 
+    
 
-console.log ("Il prezzo del tuo biglietto è:" + finalprice);
+
