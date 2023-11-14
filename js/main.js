@@ -10,21 +10,21 @@ function userdonedatacompletion(event) {
     let travellength = document.getElementById("travellength").value;
     let age = document.getElementById("age").value;
 
-    travellength= parseFloat(travellength);
+    travellength = parseFloat(travellength);
     age = parseInt(age);
 
     let ticketprice= (travellength * 0.21);
     let finalprice = ticketprice.toFixed(2);
 
 
-    if (age>=65) {
-        ticketprice= (ticketprice * 0.6);
+    if (age == over65) {
+        finalprice= (ticketprice * 0.6);
      }
-     else if (age<18) {
-         ticketprice= (ticketprice * 0.8);
+     else if (age == underage) {
+         finalprice= (ticketprice * 0.8);
      }
      else {
-         ticketprice= ticketprice;
+         finalprice= ticketprice;
      }
 
 
